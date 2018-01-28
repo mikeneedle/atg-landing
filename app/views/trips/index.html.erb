@@ -19,23 +19,41 @@ Last Name: <%= trip.last_name %>
 <li class="article-title">
 Email: <%= trip.email %>
 </li>
+
+<li class="article-title">
+Start Date: <%= trip.start_date %>
+</li>
+<li class="article-title">
+End Date: <%= trip.end_date %>
+</li>
+
 <li class="article-title">
 Trip Details: <%= trip.details %>
 </li>
+<li>  
+Date Flexibility: <%= trip.flexible.description if trip.flexible %>
+  </li>
+
 <li class="article-title">
 Location: 
 <%= trip.location.description if trip.location %>
 </li>
 <li>  
-  
-    <% if trip.activities.any? %>
+      <% if trip.activities.any? %>
       Categories:
         <% trip.activities.each do |activity| %>
         <%= activity.description %>
       <% end %>
     <% end %>
-  
-</li>
+  </li>
+
+<li>  
+Experience Level: <%= trip.experience.description if trip.experience %>
+  </li>
+
+<li>  
+Group Size: <%= trip.group_size if trip.group_size %>
+  </li>
 
  <%# if logged_in? and current_user.admin? %>
 

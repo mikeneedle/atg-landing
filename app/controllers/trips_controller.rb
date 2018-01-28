@@ -51,7 +51,7 @@ class TripsController < ApplicationController
     #params.require(:article).permit(:title, :description, category_ids: [])
     #params.require(:activity).permit(:description)
     #params.require(:article).permit(:title, :description, category_ids: [])
-    params.require(:trip).permit(:first_name, :last_name, :email, :details, :booked, :location_id, activity_ids: [])
+    params.require(:trip).permit(:first_name, :last_name, :email, :details, :booked, :location_id, :experience_id, :start_date, :end_date, :flexible_id, :group_size, activity_ids: [])
   end
   
   def set_trip
